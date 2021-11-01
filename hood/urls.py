@@ -8,4 +8,6 @@ urlpatterns = [
     path('all-hoods/', views.hoods, name='hood'),
     path('new-hood/', views.create_hood, name='new-hood'),
     path('single_hood/<hood_id>', views.single_hood, name='single-hood'),
+    path('join_hood/<id>', views.join_hood, name='join-hood'),
+    path('leave_hood/<id>', views.leave_hood, name='leave-hood'),
 ]
