@@ -81,3 +81,8 @@ def leave_hood(request, id):
     request.user.profile.neighbourhood = None
     request.user.profile.save()
     return redirect('hood')
+
+def hood_members(request, hood_id):
+    hood = NeighbourHood.objects.get(id=hood_id)
+    members = Profile.objects.filter(neighbourhood=hood)
+    return render(request, 'members.html', {'members': members})
