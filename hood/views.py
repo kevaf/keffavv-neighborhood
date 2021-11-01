@@ -33,3 +33,4 @@ def hoods(request):
         'all_hoods': all_hoods,
     }
     return render(request, 'all_hoods.html', params)
+
