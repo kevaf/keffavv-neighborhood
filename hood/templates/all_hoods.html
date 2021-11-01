@@ -2,6 +2,31 @@
 {% load crispy_forms_tags %}
 {% block content %}
 <div class="container">
+    <div id="logi" style="margin: 20px;">
+
+        <h2>MyHoods</h2>
+        {% if user.profile.neighbourhood %}
+          <ol><a href="{% url 'single-hood' user.profile.neighbourhood.id %}">&nbsp;&nbsp;{{user.profile.neighbourhood.name}}</a></ol>
+          {% else %}
+          <a href=""> &nbsp; You Have No Hood </a>
+          {% endif %}
+
+
+          <br>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
         <a href="{% url 'new-hood' %}" class="btn btn-sm btn-info mb-2" style="margin-top: 30px;"> New Hood</a>
     <div class="row">
         {% for hood in all_hoods %}

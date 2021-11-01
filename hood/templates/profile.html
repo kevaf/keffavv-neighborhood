@@ -9,11 +9,12 @@
             <h5 class="text-center mt-3">{{user.username}}</h5>
             <p class="text-center"> {{user.email}}</p>
             {% if request.user.profile.neighbourhood %}
-            <p class="text-center">My Neighborhood<a class="btn btn-sm btn-info" href="{% url 'single-hood' user.profile.neighbourhood.id %}">{{ user.profile.neighbourhood.name }}</a>
+            <p class="text-center">Your Hoods &nbsp;<a class="btn btn-sm btn-info" href="{% url 'single-hood' user.profile.neighbourhood.id %}">{{ user.profile.neighbourhood.name }}</a>
             </p>
             {% endif %}
+            <a href="{% url 'edit-profile' user.username %}" style="margin-left:220px;"><i class="fas fa-edit"></i>&nbsp;&nbsp; Edit Profile</a>
         </div>
-        <div class="col-md-3"></div>
+      
     </div>
 
 
