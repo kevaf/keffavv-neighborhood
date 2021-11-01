@@ -1,0 +1,36 @@
+<nav id="nav" class="navbar sticky-top navbar-expand-lg navbar-light">
+    <div class="container">
+      <div class="col-md-4">
+        <a  id="icons" class=" navbar-brand" href="#"> Neighbors </a>
+      </div>
+      <div class="col-md-4">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <form class="navbar-form" role="search" action="{% url 'search_results' %}">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search For a Project" name="project">
+                <div class="input-group-btn">
+                    <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i>
+
+					</button>
+                </div>
+
+            </div>
+
+        </form>
+  
+        </div>
+  
+      </div>
+      <div class="col-md-4">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <a class="item" href="#" style="color: black;"><i class="far fa-user"></i></a>
+          <a class="item" href="#" style="margin-left: 20%; font-size: small; color: black;"><i class="fas fa-plus-square">Add New</i></i></a>
+        <a class="item" href="/logout" style="margin-left: 20%; font-size: small; color: black;"><i class="fas fa-sign-out-alt">LogOut</i></a>
+        
+        </div>
+  
+  
+      </div>
+  
+    </div>
+  </nav>
